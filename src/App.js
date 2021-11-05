@@ -1,5 +1,8 @@
 import React, {lazy,Suspense} from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+
+// layouts
+const MainLayout = lazy(() => import('./layouts/MainLayout'));
 
 // views
 const Home = lazy(() => import('./views/Home'));
@@ -10,10 +13,11 @@ function App() {
     <Suspense fallback={
       <div>Fallback</div>
     }>
-      <Switch>
-        <Route exact path="/" component={Home}/>
-      </Switch>
-   
+      <MainLayout>
+        <Routes>
+          <Route exact path="/" component={Home}/>
+        </Routes>
+      </MainLayout>
     </Suspense>
   );
 }
