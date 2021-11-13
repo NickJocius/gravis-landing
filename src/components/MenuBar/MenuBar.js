@@ -5,8 +5,24 @@ import {
     Toolbar,
     Typography,
     useScrollTrigger,
-    Slide
+    Slide,
+    IconButton,
+    Button
 } from '@material-ui/core';
+import MenuIcon from '@material-ui/icons/Menu';
+import { makeStyles } from '@material-ui/styles';
+
+const useStyles = makeStyles((theme) => ({
+    menuButton: {
+        marginRight: theme.spacing(2),
+        [theme.breakpoints.up('sm')]: {
+            display: 'none',
+        }
+    },
+    title: {
+        flexGrow: 1
+    }
+}));
 
 function HideOnScroll(props) {
     const { children } = props;
@@ -24,12 +40,18 @@ HideOnScroll.propTypes = {
   };
 
 const MenuBar = (props) => {
+    const classes = useStyles();
     return (
         <>
             <HideOnScroll {...props}>
                 <AppBar>
                     <Toolbar>
-                        <Typography variant="h6">Scroll to Hide App Bar</Typography>
+                        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                            <MenuIcon/>
+                        </IconButton>
+                        <Typography variant="h6" className={classes.title}>Gravis</Typography>
+                        <Button >Album</Button>
+                        <Button >Pricing</Button>
                     </Toolbar>
                 </AppBar>
             </HideOnScroll>

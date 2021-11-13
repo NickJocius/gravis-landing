@@ -7,6 +7,9 @@ import {CssBaseline} from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
     root: {
         minHeight: '100vh',
+        minWidth: '100%',
+        display: 'flex',
+        flexDirection: 'column'
     }
 }));
 

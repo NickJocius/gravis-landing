@@ -1,10 +1,14 @@
-import React from 'react'
+import React from 'react';
+import Album from '../components/Album/Album';
+import Pricing from '../components/Pricing/Pricing';
 
 const Home = () => {
+    
     return (
-        <div>
-            home
-        </div>
+        <>
+            <Album />
+            <Pricing/>
+        </>
     )
 }
 

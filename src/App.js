@@ -15,7 +15,7 @@ function App() {
     }>
       <MainLayout>
         <Routes>
-          <Route exact path="/" component={Home}/>
+          <Route exact path="/" element={<Home/>}/>
         </Routes>
       </MainLayout>
     </Suspense>
