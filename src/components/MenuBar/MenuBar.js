@@ -13,6 +13,9 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles((theme) => ({
+    root: {
+        maxWidth: '100%'
+    },
     menuButton: {
         marginRight: theme.spacing(2),
         [theme.breakpoints.up('sm')]: {
@@ -29,7 +32,7 @@ function HideOnScroll(props) {
     const trigger = useScrollTrigger({threshold: 50});
   
     return (
-      <Slide appear={false} direction="down" in={!trigger}>
+      <Slide appear={false} direction="down" in={!trigger} >
         {children}
       </Slide>
     );
@@ -42,9 +45,9 @@ HideOnScroll.propTypes = {
 const MenuBar = (props) => {
     const classes = useStyles();
     return (
-        <>
+        <nav className={classes.root}>
             <HideOnScroll {...props}>
-                <AppBar>
+                <AppBar >
                     <Toolbar>
                         <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                             <MenuIcon/>
@@ -56,7 +59,7 @@ const MenuBar = (props) => {
                 </AppBar>
             </HideOnScroll>
             <Toolbar />
-        </>
+        </nav>
     );
 };
 

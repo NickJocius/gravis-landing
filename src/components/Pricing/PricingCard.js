@@ -20,7 +20,8 @@ const useStyles = makeStyles((theme) => ({
         }),
         "&:hover": {
             transform: 'translateY(-10px)',
-        }
+        },
+        
     },
     card: {
         "&:hover": {
