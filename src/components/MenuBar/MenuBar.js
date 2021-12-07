@@ -10,6 +10,7 @@ import {
     Button
 } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
+import MenuListItem from './MenuListItem';
 import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -55,6 +56,7 @@ const MenuBar = (props) => {
                         <Typography variant="h6" className={classes.title}>Gravis</Typography>
                         <Button >Album</Button>
                         <Button >Pricing</Button>
+                        <MenuListItem title="Forms"/>
                     </Toolbar>
                 </AppBar>
             </HideOnScroll>

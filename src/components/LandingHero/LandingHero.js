@@ -37,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
     button: {
         minWidth: 200,
         backgroundColor: theme.palette.primary.main,
+        color: theme.palette.common.white,
         transition: theme.transitions.create(['transform', 'color', 'backgroundColor'], {
             duration: theme.transitions.duration.complex,
             easing: theme.transitions.easing.easeInOut,
@@ -44,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
         "&:hover": {
             transform: 'scale(1.1)',
             backgroundColor: theme.palette.primary.light,
-            color: theme.palette.common.white,
+            color: theme.palette.common.black,
         },
     },
     h5: {
